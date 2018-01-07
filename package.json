@@ -1,24 +1,19 @@
 {
-  "author": "Andrey Tarantsov <andreyvit@me.com>",
-  "contributors": [
-    "Gavriel Fleischer <flocsy@gmail.com>"
-  ],
-  "name": "json-diff",
+  "author": "CK",
+  "name": "json-diff-minimal",
   "description": "JSON diff",
-  "version": "0.5.2",
-  "homepage": "https://github.com/andreyvit/json-diff",
+  "version": "0.0.1",
   "repository": {
-    "url": "git@github.com:andreyvit/json-diff.git"
+    "url": "https://github.com/CharlesKuncheria/json-diff"
   },
   "main": "lib/index.js",
   "bin": "bin/json-diff.js",
   "scripts": {
-    "prepare": "./node_modules/.bin/coffee-script -c lib",
+    "prepare": "./node_modules/.bin/coffee -c lib",
     "test": "./node_modules/mocha/bin/mocha test/*.coffee",
     "cov": "rm -rf lib-cov; jscoverage lib lib-cov; env JSLIB=lib-cov mocha -R dot && env JSLIB=lib-cov mocha -R html-cov >coverage.html; open coverage.html"
   },
   "dependencies": {
-    "cli-color": "~0.1.6",
     "difflib": "~0.2.1",
     "dreamopt": "~0.6.0"
   },
